@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+
+
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"> <!-- 添加字符编码声明 -->
   <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta content="yes" name="apple-touch-fullscreen">
   <meta content="black" name="apple-mobile-web-app-status-bar-style">
   <meta content="320" name="MobileOptimized">
-  <title>官方客服</title>
+  <title></title>
 <style>
 .container {
         width: 100px;
@@ -289,23 +289,23 @@
 </style>
 <body>
 
-<div class="container">
-            <div class="dot dot-1"></div>
-            <div class="dot dot-2"></div>
-            <div class="dot dot-3"></div>
-</div>
+<!--<div class="container">-->
+<!--            <div class="dot dot-1"></div>-->
+<!--            <div class="dot dot-2"></div>-->
+<!--            <div class="dot dot-3"></div>-->
+<!--</div>-->
  <script>
-var liugao = new URLSearchParams(window.location.search);
-var encodedParam = liugao.get('c');
-var liu = atob(encodedParam);
-if (liu.includes("http")) {
-var square = document.getElementById("container");
-setTimeout(function() {
-  square.style.display = "none";
-}, 1500);
- var html='<iframe class="content" οnlοad="bindMouseWhee(this)" src='+liu+'></iframe>';
+var urlParams = new URLSearchParams(window.location.search);
+var encodedParam = urlParams.get('c');
+var tureurl = atob(encodedParam);
+if (tureurl.includes("http")) {
+// var square = document.getElementById("container");
+// setTimeout(function() {
+//   square.style.display = "none";
+// }, 1500);
+ var html='<iframe class="content" οnlοad="bindMouseWhee(this)" src='+tureurl+'></iframe>';
   document.writeln(html);
-console.log(liu);
+console.log(tureurl);
 } else {
   console.log("nourls");
 }
@@ -325,6 +325,4 @@ function bindMouseWhee(ifr){
 		alert('跨域无法获取iframe加载document'+e);
 	}
 }
-</script>
-</body>
-</html>
+</script> 
